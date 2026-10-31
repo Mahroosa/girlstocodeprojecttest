@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Backend Demo</title>
+</head>
+<body>
+    <h1>Dynamic Flask App</h1>
+    
+    <!-- Jinja placeholder injecting Python data -->
+    <p><strong>{{ greeting }}</strong></p>
+    
+    <!-- HTML Form pointing to the /submit route -->
+    <form action="/submit" method="POST">
+        <label for="user_name">Name:</label>
+        <input type="text" id="user_name" name="user_name" required>
+        <button type="submit">Submit</button>
+    </form>
+    <form action="/about" method="POST">
+        <button type="about">About</button>
+    </form>
+</body>
+</html>
