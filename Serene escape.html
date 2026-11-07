@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ease & Relax - Serene Escape</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#d95a24',
+                            hover: '#b84617',
+                            light: '#fdf2ee',
+                            soft: '#f7dcd0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient-overlay {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(217, 90, 36, 0.3) 60%, rgba(255, 255, 255, 1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Left Topmost Corner Icon / Logo Placeholder -->
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-brand text-white flex items-center justify-center shadow-md shadow-brand/20 group-hover:scale-105 transition-transform duration-300">
+                    <!-- Icon Placeholder -->
+                    <i class="fa-solid fa-water text-2xl"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-xl tracking-tight text-gray-900 group-hover:text-brand transition-colors">CoastalEase</span>
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase">Sanctuary</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-brand font-medium text-base transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand hover:after:w-full after:transition-all">Home</a>
+                <a href="#quizzes" class="text-gray-700 hover:text-brand font-medium text-base transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand hover:after:w-full after:transition-all">Quizzes</a>
+                <a href="#contact" class="text-gray-700 hover:text-brand font-medium text-base transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand hover:after:w-full after:transition-all">Contact</a>
+                <a href="#quizzes" class="bg-brand text-white font-medium px-5 py-2.5 rounded-full hover:bg-brand-hover shadow-md hover:shadow-lg transition-all duration-300">
+                    Take a Quiz
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-gray-700 hover:text-brand hover:bg-brand-light focus:outline-none transition-colors" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#home" class="block py-2.5 px-4 text-base font-medium text-gray-700 hover:text-brand hover:bg-brand-light rounded-xl transition-colors">Home</a>
+            <a href="#quizzes" class="block py-2.5 px-4 text-base font-medium text-gray-700 hover:text-brand hover:bg-brand-light rounded-xl transition-colors">Quizzes</a>
+            <a href="#contact" class="block py-2.5 px-4 text-base font-medium text-gray-700 hover:text-brand hover:bg-brand-light rounded-xl transition-colors">Contact</a>
+            <a href="#quizzes" class="block text-center bg-brand text-white font-medium py-3 rounded-xl hover:bg-brand-hover shadow-md transition-all">Take a Quiz</a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow">
+        
+        <!-- Hero Section featuring the Sea Photo -->
+        <section id="home" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+            <!-- Sea Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img 
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80" 
+                    alt="Serene calm turquoise ocean water and white sand beach background" 
+                    class="w-full h-full object-cover object-center transform scale-105 transition-transform duration-10000 hover:scale-100"
+                    onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/d95a24/ffffff?text=Serene+Ocean+View';"
+                />
+                <!-- Soft Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-white via-black/30 to-black/50"></div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-20">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white font-medium text-sm mb-6 border border-white/30 tracking-wide uppercase">
+                    Welcome to Your Coastal Retreat
+                </span>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-6 drop-shadow-md">
+                    Unwind by the Waters of Peace
+                </h1>
+                <p class="text-lg sm:text-2xl text-gray-100 max-w-3xl mx-auto mb-10 leading-relaxed font-light drop-shadow">
+                    Take a deep breath, leave behind the noise, and re-discover your inner calm with engaging relaxation quizzes and serene coastal escapes.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#quizzes" class="w-full sm:w-auto bg-brand hover:bg-brand-hover text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-brand/40 transition-all duration-300 transform hover:-translate-y-0.5 text-lg">
+                        Explore Quizzes <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto bg-white/90 hover:bg-white text-gray-900 font-semibold px-8 py-4 rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 transform hover:-translate-y-0.5 text-lg">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quizzes Preview Section -->
+        <section id="quizzes" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs uppercase font-bold tracking-widest text-brand mb-3">Mindful Activities</h2>
+                    <p class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">Discover Your Mindful Mood</p>
+                    <p class="mt-4 text-lg text-gray-600">Take a moment for yourself. Try our short, soothing quizzes designed to help you relax and reflect.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Quiz Card 1 -->
+                    <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-brand-light text-brand flex items-center justify-center text-2xl mb-6 group-hover:bg-brand group-hover:text-white transition-colors duration-300">
+                                <i class="fa-solid fa-sun"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">What Is Your Island Vibe?</h3>
+                            <p class="text-gray-600 leading-relaxed mb-6">Uncover the coastal destination that best aligns with your current energy and relaxation needs.</p>
+                        </div>
+                        <button onclick="startQuizModal('Island Vibe')" class="w-full text-center bg-gray-50 hover:bg-brand text-gray-800 hover:text-white font-medium py-3 rounded-xl transition-all duration-300 border border-gray-100">
+                            Start Quiz
+                        </button>
+                    </div>
+
+                    <!-- Quiz Card 2 -->
+                    <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-brand-light text-brand flex items-center justify-center text-2xl mb-6 group-hover:bg-brand group-hover:text-white transition-colors duration-300">
+                                <i class="fa-solid fa-wind"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Stress Score Check</h3>
+                            <p class="text-gray-600 leading-relaxed mb-6">A quick 3-minute check-in to gauge your stress levels and get tailored calming techniques.</p>
+                        </div>
+                        <button onclick="startQuizModal('Stress Score Check')" class="w-full text-center bg-gray-50 hover:bg-brand text-gray-800 hover:text-white font-medium py-3 rounded-xl transition-all duration-300 border border-gray-100">
+                            Start Quiz
+                        </button>
+                    </div>
+
+                    <!-- Quiz Card 3 -->
+                    <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-brand-light text-brand flex items-center justify-center text-2xl mb-6 group-hover:bg-brand group-hover:text-white transition-colors duration-300">
+                                <i class="fa-solid fa-compass"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Ideal Evening Routine</h3>
+                            <p class="text-gray-600 leading-relaxed mb-6">Find out which evening habits will help you unwind completely for a deep, peaceful sleep.</p>
+                        </div>
+                        <button onclick="startQuizModal('Ideal Evening Routine')" class="w-full text-center bg-gray-50 hover:bg-brand text-gray-800 hover:text-white font-medium py-3 rounded-xl transition-all duration-300 border border-gray-100">
+                            Start Quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer with Contact Section -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-12 border-b border-gray-800">
+                
+                <!-- Left Side: Brand & Motto -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand text-white flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-water"></i>
+                        </div>
+                        <span class="font-bold text-2xl tracking-tight text-white">CoastalEase</span>
+                    </div>
+
+                    <p class="text-gray-400 leading-relaxed max-w-sm">
+                        Dedicated to providing quiet moments of pause, calming sea landscapes, and reflective mental wellness tools.
+                    </p>
+
+                    <!-- Exact Requested Motto prominent in footer -->
+                    <div class="inline-flex items-center space-x-2 bg-brand/10 border border-brand/30 px-5 py-3 rounded-2xl text-brand font-semibold text-lg">
+                        <span>Go ease and relax! ❤️</span>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="flex items-center space-x-4 pt-2">
+                        <a href="https://www.facebook.com" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-brand hover:text-white transition-colors" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-brand hover:text-white transition-colors" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-brand hover:text-white transition-colors" aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-brand hover:text-white transition-colors" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Contact Area & Form -->
+                <div class="lg:col-span-7 bg-gray-800/50 p-8 rounded-3xl border border-gray-700/50">
+                    <h3 class="text-xl font-bold text-white mb-2">Get in Touch</h3>
+                    <p class="text-gray-400 text-sm mb-6">Have questions or feedback? We'd love to hear from you.</p>
+                    
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-xs font-medium text-gray-400 mb-1">Your Name</label>
+                                <input type="text" id="name" required placeholder="John Doe" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand transition-colors text-sm">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-xs font-medium text-gray-400 mb-1">Email Address</label>
+                                <input type="email" id="email" required placeholder="john@example.com" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand transition-colors text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-medium text-gray-400 mb-1">Message</label>
+                            <textarea id="message" rows="3" required placeholder="Write your message here..." class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand transition-colors text-sm resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full sm:w-auto bg-brand hover:bg-brand-hover text-white font-medium px-6 py-3 rounded-xl transition-colors duration-300 flex items-center justify-center space-x-2">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                        </button>
+                    </form>
+
+                    <!-- Contact Info Badges -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-6 border-t border-gray-700/60 text-xs text-gray-400">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope text-brand text-base"></i>
+                            <span>hello@coastalease.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-location-dot text-brand text-base"></i>
+                            <span>100 Ocean Drive, Serenity Bay</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+                <p>&copy; 2026 CoastalEase Sanctuary. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-gray-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-400 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Interactive Quiz Modal -->
+    <div id="quizModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative animate-in fade-in zoom-in duration-200">
+            <button onclick="closeQuizModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 p-2 rounded-full">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <div class="text-center py-4">
+                <div class="w-16 h-16 bg-brand-light text-brand rounded-2xl flex items-center justify-center mx-auto text-3xl mb-4">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <h3 id="modalQuizTitle" class="text-2xl font-bold text-gray-900 mb-2">Quiz Title</h3>
+                <p class="text-gray-600 mb-6 text-sm">Take a deep breath. Click below to begin your calming reflection.</p>
+                
+                <div class="bg-brand-light p-4 rounded-2xl mb-6">
+                    <p class="text-brand font-semibold italic text-base">"Go ease and relax! ❤️"</p>
+                </div>
+
+                <button onclick="closeQuizModal()" class="w-full bg-brand hover:bg-brand-hover text-white font-semibold py-3 rounded-xl transition-colors shadow-md">
+                    Start Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Mobile Navigation Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars text-2xl';
+            });
+        });
+
+        // Quiz Modal Controls
+        function startQuizModal(title) {
+            document.getElementById('modalQuizTitle').innerText = title;
+            document.getElementById('quizModal').classList.remove('hidden');
+        }
+
+        function closeQuizModal() {
+            document.getElementById('quizModal').classList.add('hidden');
+        }
+
+        // Contact Form Handling (Custom Message Box - No alert())
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const btn = form.querySelector('button[type="submit"]');
+            
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Sending...`;
+
+            setTimeout(() => {
+                btn.innerHTML = `<i class="fa-solid fa-check"></i> Sent!`;
+                btn.classList.remove('bg-brand');
+                btn.classList.add('bg-green-600');
+                
+                setTimeout(() => {
+                    form.reset();
+                    btn.disabled = false;
+                    btn.innerHTML = `<span>Send Message</span><i class="fa-solid fa-paper-plane text-xs"></i>`;
+                    btn.classList.remove('bg-green-600');
+                    btn.classList.add('bg-brand');
+                }, 2000);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
